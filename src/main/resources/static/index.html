@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/script.js"></script>
+</head>
+
+<body class="bg-dark text-white">
+    <div id="name-form" class="bg-primary d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="input-group">
+                        <input type="text" id="name-value" placeholder="Enter your name" autofocus class="form-control">
+                        <div class="input-group-append">
+                            <button class="btn btn-warning" id="login">Enter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="chat-room">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card-body">
+                        <div class="input-group">
+
+                            <input type="text" placeholder="Enter your message " id="message-value" autofocus
+                                class="form-control">
+
+                            <div class="input-group-append">
+
+                                <button class="btn btn-dark" id="send">Send</button>
+                                <button class="btn btn-dark" id="logout">Logout</button>
+
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table id="message-container-table">
+                                <th><h1>Live Chat Room</h1></th>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
